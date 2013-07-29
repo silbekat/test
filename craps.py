@@ -10,9 +10,6 @@ def roll():
 	return dice[1]+dice[2]
 	
 	
-	
-	
-	
 
 		
 while bet!=0:	
