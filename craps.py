@@ -1,4 +1,5 @@
 import random
+import odds
 stake=1000
 bet=5
 i=1
@@ -22,3 +23,5 @@ while bet!=0:
         else:
                 points.append(result)
                 print(points)
+
+
