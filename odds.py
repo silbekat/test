@@ -1,6 +1,6 @@
 //
 This file holds the payout odds
-
+payme = type_of_bet,payout)
 //
 
 def odds(bet,unit):
