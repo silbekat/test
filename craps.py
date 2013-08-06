@@ -1,27 +1,34 @@
 import random
-import odds
+import player
+import re
 stake=1000
-bet=5
+bet=1
+unit=5
 i=1
 points=[]
 def roll():
-  dice=[1,1,2,3,2,4,5,4,6,6,3,5]
+	dice1=[1,2,3,4,5,6]
+	dice2=[1,2,3,4,5,6]
 	random.seed()
-	random.shuffle(dice)
-	return dice[1]+dice[2]
-	
+	random.shuffle(dice2)
+	random.shuffle(dice1)
+	print(dice1[1])
+	print(dice2[2])
+	return dice1[1]+dice2[2]
 	
 
-		
-while bet!=0:	
-        bet=int(input("Place bet..."))
+
+while bet !='END':
+        bet=input("Place bet...")
         result=roll()
-        print(result)
+        #print(result)
+        odds(bet,unit)
         if result==bet:
             print("you win")
-            points=[]
+            #points=[]
         else:
                 points.append(result)
                 print(points)
 
-
+        if points.index(result)!=0:
+                points.remove(result)
